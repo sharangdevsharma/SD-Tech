@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.D Website|login page</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Navbar Section-->
+
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"> <i class="fa fa-rocket"></i><i>SD TECH</i> </a>
+
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="tech.html" class="navbar__links">Tech</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__links">Products</a>
+          </li>
+          <li class="navbar__item">
+            <a href="feedback.html" class="navbar__links">Feedback</a>
+          </li>
+
+          <input type="text" class="search" placeholder="Search..." />
+
+          <button id="searchbuttontop">
+            <svg viewBox="0 0 1024 1024">
+              <path
+                class="path1"
+                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412
+		 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312
+		 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529
+		 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091
+		 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455
+		 97.091-218.455 218.455z"
+              ></path>
+            </svg>
+          </button>
+
+          <li class="navbar__btn">
+            <a href="index.html" class="button">🔙</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Sign In</div>
+        <div class="title signup">Sign UP</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Sign In</label>
+          <label for="signup" class="slide signup">Sign Up</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <!--SIGN-IN PHP START-->
+          <form class="login" method="post" action="login.php">
+            <div class="field">
+              <input
+                type="text"
+                name="user_email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="user_password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="pass-link">
+              <a href="forgot.html">Forgot password?</a>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Sign In" />
+            </div>
+            
+            <div class="signup-link">
+              Not interested? <a href="delete.html">Delete Account</a>
+            </div>
+          </form>
+
+          <!--SIGN-UP PHP START-->
+
+          <form class="signup" method="post" action="signup.php">
+            <div class="field">
+              <input
+                type="text"
+                name="user_email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="user_password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm password"
+                required
+              />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="SignUp" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+   
+      signupBtn.onclick = () => {
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      };
+      loginBtn.onclick = () => {
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      };
+      signupLink.onclick = () => {
+        signupBtn.click();
+        return false;
+      };
+    </script>
+  </body>
+</html>

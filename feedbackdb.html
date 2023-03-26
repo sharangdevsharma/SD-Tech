@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="feedback.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <title>S.D Website|feedback page</title>
+
+  </head>
+  
+    <body>
+	
+	    <!--Navbar Section-->
+
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"><i class="fa fa-rocket"></i><i>SD TECH</i></a>
+
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="tech.html" class="navbar__links">Tech</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Products</a>
+          </li>
+		   <li class="navbar__item">
+            <a href="survey.html" class="navbar__links">Feedback</a>
+          </li>
+ 
+		  <input type="text" class="search" placeholder="Search...">
+		  
+		  <button id="searchbuttontop">
+         <svg viewBox="0 0 1024 1024"><path class="path1"
+		 d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412
+		 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312
+		 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529
+		 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091
+		 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455
+		 97.091-218.455 218.455z"></path></svg>
+         </button>
+		  
+		  
+          <li class="navbar__btn">
+            <a href="login.html" class="button">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+		
+		
+
+
+		<main>
+		<div class="center">
+      <form method="post" action="searchdb.php">
+	  
+        <section>
+		
+          <h2 id="student-info">About you</h2>
+		  
+          <div class="info">
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first_name" id="first-name" class="forminput" />
+          </div>
+		  
+		  <div class="info">
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last_name" id="last-name" class="forminput" />
+          </div>
+		  
+		  <div class="info">
+            <label for="father-name">Father Name:</label>
+            <input type="text" name="father_name" id="father-name" class="forminput" />
+          </div>
+		  
+		  <div class="info">
+            <label for="mother-name">Mother Name:</label>
+            <input type="text" name="mother_name" id="mother-name" class="forminput" />
+          </div>
+		  
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="email" id="email" class="forminput" />
+          </div>
+		  
+		  <div class="info">
+            <label for="age">Age(In Years):</label>
+            <input type="number" name="age" min="13" max="120" class="forminput" />
+          </div>
+		 
+          <div class="info">
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="dob" id="birth-date" class="forminput"/>
+          </div>
+		  <div class="info">
+		   <label>Whats your Education Qualification?
+          <select name="education_qualification" class="forminput">
+            <option value="">(select one)</option>
+			 <option value="1">8th</option>
+            <option value="10th">10th</option>
+            <option value="2th">12th</option>
+            <option value="graduation">Graduation</option>
+            <option value="post_graduation">Post graduation</option>
+			 <option value="illiterate">Illiterate</option>
+			 <option value="none">Prefer not to tell</option>
+          </select>
+        </label>
+		  </div>
+        </section>
+		
+        
+        <section>
+          <h2>Profession</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="customer">Are you a Web Developer?</label>
+            </div>
+            <div class="answer">
+              <select name="question" id="customer" class="forminput" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-questions">Tell us more</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-questions" name="comment" rows="6" cols="74" placeholder="I'm a developer...etc."></textarea>
+            </div>
+          </div>
+        </section>
+        <input type="submit" value="SUBMIT" id="bottombtn">
+      </form>
+	  </div>
+    </main>
+		
+		 <!--Footer Section-->
+
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/">How it works</a>
+            <a href="/">Testimonials</a>
+            <a href="/">Careers</a>
+            <a href="/">Investments</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a>
+            <a href="/">Support</a>
+            <a href="/">Destinations</a>
+            <a href="/">Sponsorships</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          
+          <div class="footer__link--items">
+            <h2>Connect With US</h2>
+            <a href="https://instagram.com/sharmasharangdev?igshid=YmMyMTA2M2Y=/">Instagram</a>
+            <a href="https://github.com/sharangdevsharma">Git Hub</a>
+            <a href="https://www.linkedin.com/in/sharang-dev-sharma-957668217/">Linked In</a>
+            <a href="mailto:sharangdevsharma2911@gmail.com">E-Mail</a>
+          </div>
+        </div>
+      </div>
+      <div class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fa fa-rocket"></i><i>SD TECH</i></a>
+            </div>
+            <p class="website__right">© SD TECH 2023. All rights reserved</p>
+        <div>
+          <div class="social__icons">
+            <a href="https://instagram.com/sharmasharangdev?igshid=YmMyMTA2M2Y=/" class="social__icon--linkI" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/sharangdevsharma" class="social__icon--linkG" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sharang-dev-sharma-957668217/" class="social__icon--linkL" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sharangdevsharma2911@gmail.com" class="social__icon--linkM" target="_blank"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+	 
+
+    </body>
+</html>
